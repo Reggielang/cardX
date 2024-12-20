@@ -17,6 +17,9 @@ Including another URLconf
 # from django.contrib import admin
 
 from django.urls import include, path
+
+from cardX import admin
+
 urlpatterns = [
     path("cardX/", include("cardX.urls")),
     # path("admin/", admin.site.urls),
