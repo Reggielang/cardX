@@ -76,11 +76,12 @@ WSGI_APPLICATION = 'WebProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'cards',
-        'CLIENT': {
-            'host': 'mongodb://localhost:27017/',  # 例如：'mongodb://localhost:27017/'
-        }
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'cards',  # 替换为您的数据库名称
+        'USER': 'root',  # 替换为您的数据库用户名
+        'PASSWORD': '123456',  # 替换为您的数据库密码
+        'HOST': 'localhost',  # 如果数据库不在本地，请提供主机名或 IP 地址
+        'PORT': '3306',  # 默认端口是 3306，如果不是请更改
     }
 }
 
@@ -90,6 +91,7 @@ REST_FRAMEWORK = {
         'django_filters.rest_framework.DjangoFilterBackend',
     ],
 }
+
 
 LOGGING = {
     'version': 1,
